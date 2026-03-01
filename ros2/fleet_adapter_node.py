@@ -13,7 +13,7 @@ class FleetAdapter(Node):
         self.cmd_vel_pub = self.create_publisher(Twist, '/cmd_vel_safe', 10)
         self.scan_sub = self.create_subscription(LaserScan, '/scan', self.scan_cb, 10)
         
-        self.ngrok_url = "https://noncolorable-fluctuatingly-lael.ngrok-free.dev"
+        self.ngrok_url = ERP_URL
         self.obstacle_detected = False
         self.is_patrolling = False
         
@@ -48,7 +48,6 @@ class FleetAdapter(Node):
         now = time.time()
         twist = Twist()
 
-        # If currently turning
         if self.turning:
             if now < self.turn_end_time:
                 twist.angular.z = 1.0
@@ -58,14 +57,12 @@ class FleetAdapter(Node):
                 self.turning = False
                 self.obstacle_detected = False
 
-        # New obstacle detected → start turn
         if self.obstacle_detected:
             self.get_logger().warn("Obstacle! Starting 180° turn")
             self.turning = True
             self.turn_end_time = now + 3.0
             return
 
-        # Normal patrol motion
         twist.linear.x = 0.2
         self.cmd_vel_pub.publish(twist)
 
