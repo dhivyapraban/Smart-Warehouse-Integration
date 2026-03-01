@@ -3,6 +3,7 @@ from typing import Optional
 from sqlalchemy import Column, String, Integer, DateTime
 from sqlalchemy.dialects.postgresql import UUID
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import uuid
 
 from config.database import Base
@@ -30,7 +31,13 @@ class Task(Base):
     pickup_location = Column(String, nullable=False)
     drop_location = Column(String, nullable=False)
     status = Column(String, default="CREATED")
-    created_at = Column(DateTime, default=datetime.utcnow)
+    #For storing in IST
+    created_at = Column(
+        DateTime(timezone=True),
+        default=lambda: datetime.now(ZoneInfo("Asia/Kolkata"))
+    )
+    #for UTC
+    # created_at = Column(DateTime, default=datetime.utcnow)
     pickup_reached_at = Column(DateTime, nullable=True)
     drop_started_at = Column(DateTime, nullable=True)
     completed_at = Column(DateTime, nullable=True)
