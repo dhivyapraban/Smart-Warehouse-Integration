@@ -1,0 +1,12 @@
+{
+  "ITEM-001": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-53",
+    "bin": "BIN-4"
+  },
+  "ITEM-005": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-58",
+    "bin": "BIN-5"
+  }
+}
