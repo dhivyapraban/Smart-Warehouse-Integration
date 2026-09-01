@@ -4,9 +4,49 @@
     "rack": "RACK-53",
     "bin": "BIN-4"
   },
+  "ITEM-002": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-54",
+    "bin": "BIN-1"
+  },
+  "ITEM-003": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-55",
+    "bin": "BIN-2"
+  },
+  "ITEM-004": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-56",
+    "bin": "BIN-3"
+  },
   "ITEM-005": {
     "warehouse": "WH-01 - CIT",
     "rack": "RACK-58",
+    "bin": "BIN-5"
+  },
+  "ITEM-006": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-60",
+    "bin": "BIN-1"
+  },
+  "ITEM-007": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-61",
+    "bin": "BIN-2"
+  },
+  "ITEM-008": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-62",
+    "bin": "BIN-3"
+  },
+  "ITEM-009": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-63",
+    "bin": "BIN-4"
+  },
+  "ITEM-010": {
+    "warehouse": "WH-01 - CIT",
+    "rack": "RACK-64",
     "bin": "BIN-5"
   }
 }
